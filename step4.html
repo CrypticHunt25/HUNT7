@@ -1,115 +1,227 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cryptic Hunt 2 - Step 2</title>
+    <title>Cryptic Hunt</title>
     <style>
         body {
-            background-image: url('https://i.pinimg.com/736x/47/bd/49/47bd49e1b212f0fb1a5de3aa7accd189.jpg'); /* Replace with hosted link */
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.pinimg.com/236x/63/fd/47/63fd4732e2e1991d685c650fbb429059.jpg'); 
             background-size: cover;
-            background-attachment: fixed;
-            font-family: 'Poppins', sans-serif;
-            color: #f0f8ff;
+            color: white;
             text-align: center;
             margin: 0;
             padding: 0;
         }
-        .greeting {
+
+        h1 {
+            font-size: 3em;
             margin-top: 20px;
-            font-size: 2.5rem;
-            animation: fadeIn 2s ease-in-out;
-            color: #ffdf00;
-            text-shadow: 2px 2px 4px #000;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
-        .emoji {
-            font-size: 3rem;
-            animation: bounce 2s infinite;
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
+
         .puzzle-container {
-            margin: 20px auto;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 15px;
-            padding: 20px;
-            font-size: 1.5rem;
-            width: 80%;
-            max-width: 700px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            color: #f0e68c;
-        }
-        img {
-            max-width: 300px;
-            margin: 20px 0;
-        }
-        input[type="text"] {
-            margin-top: 15px;
-            font-size: 1.2rem;
-            padding: 10px;
+            margin-top: 40px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 30px;
             border-radius: 10px;
-            border: 1px solid #f0e68c;
             width: 60%;
-            max-width: 400px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-left: auto;
+            margin-right: auto;
         }
-        button {
-            margin-top: 15px;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            border: none;
-            border-radius: 10px;
-            background-color: #6a5acd;
-            color: white;
+
+        .puzzle-instructions {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .crossword-grid {
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(15, 30px);
+            grid-gap: 2px;
+            justify-content: center;
+        }
+
+        .crossword-grid div {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 1.2em;
+            border: 1px solid #fff;
+            background-color: rgba(0, 0, 0, 0.7);
             cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
-        button:hover {
-            background-color: #483d8b;
+
+        .crossword-grid div.found {
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 1.1em;
         }
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+        .footer a {
+            color: #ffcc00;
+            text-decoration: none;
         }
     </style>
-    <script>
-        document.addEventListener("contextmenu", function(e) {
-            e.preventDefault();
-        });
-
-        function checkAnswer() {
-            const answer = document.getElementById("answer").value.toLowerCase();
-            if (answer === "snitch35") {
-                window.location.href = "step5.html"; // Replace with the actual hosted link for step 3
-            } else {
-                alert("Incorrect! Try again.");
-            }
-        }
-    </script>
 </head>
 <body>
-    <div class="greeting">
-        The Magical Cryptic Hunt Continues! 🪄✨<br>
-        <span class="emoji">⚡🏆✨</span>
-    </div>
+
+    <header>
+        <h1>Cryptic Hunt: Harry potter</h1>
+        <h2>Clue 3: The Hidden Words</h2>
+    </header>
+
     <div class="puzzle-container">
-        <p>Observe the image below carefully and solve the numeric puzzle:</p>
-        <img src="https://i.pinimg.com/736x/99/18/4b/99184b9155f30bb4598f2ef4f6d14cfc.jpg" alt="Golden Snitch"> <!-- Replace with hosted link -->
-        <p><strong>Numeric Puzzle:</strong></p>
-        <p>
-            "I am a number:<br>
-            - A product of two prime numbers.<br>
-            - My digits add up to 8.<br>
-            - I am larger than 30 but smaller than 50.<br>
-            What number am I?"
-             The image and the answer of the riddle below when combined leads you to next step.
-        </p>
+        <div class="puzzle-instructions">
+            <p>Your mission is simple: Find the three key words hidden in the crossword puzzle below. These words will lead you closer to solving the mystery!</p>
+            <p><strong>Words to find:</strong> Answers of the clues!!</p>
+            class="clue-section">
+            <h3>Clues:</h3>
+            <h4>Crossword 1:</h4>
+            <ul>
+                <li>1 The Wizarding sport played on broomsticks.</li>
+                <li>2 The Elder wand is made up of this material.</li>
+            </ul>
+
+                       
+            <h4>Crossword 2:</h4>
+            <ul>
+                <li>1 The Boy who lived.</li>
+                <li>2 A Quidditch stadium is an example of this type of structure.</li>
+            </ul>
+        </div>
+
+        <!-- Crossword Grid -->
+        <div class="crossword-grid" id="crosswordGrid">
+            <!-- Dynamically generated puzzle cells go here -->
+        </div>
+
+        <div class="footer">
+            <p>Once you've found all 4 words, move on to the next clue! <a href="#"></a></p>
+        </div>
     </div>
-    <input type="text" id="answer" placeholder="Enter your answer here...">
-    <br>
-    <button onclick="checkAnswer()">Submit</button>
+
+    <script>
+        const crossword = [
+            ["R", "A", "K", "R", "G", "B", "Z", "M", "I", "H", "Q", "W", "V", "L", "T"],
+            ["E", "U", "I", "C", "E", "A", "X", "H", "P", "R", "O", "B", "W", "F", "A"],
+            ["F", "D", "A", "E", "G", "O", "D", "Y", "M", "A", "M", "O", "C", "S", "Q"],
+            ["L", "O", "U", "L", "O", "L", "I", "A", "R", "K", "O", "R", "F", "H", "U"],
+            ["L", "P", "S", "M", "B", "K", "R", "M", "D", "D", "B", "R", "E", "A", "I"],
+            ["C", "B", "O", "B", "9", "R", "R", "W", "O", "S", "A", "D", "N", "R", "D"],
+            ["T", "Y", "P", "R", "Y", "L", "T", "P", "L", "E", "O", "O", "C", "R", "D"],
+            ["I", "E", "E", "A", "S", "R", "E", "P", "G", "I", "K", "R", "K", "Y", "I"],
+            ["O", "U", "O", "H", "A", "U", "N", "0", "G", "E", "E", "F", "L", "G", "T"],
+            ["N", "R", "B", "I", "A", "Q", "K", "E", "O", "I", "R", "B", "P", "E", "C"],
+            ["S", "U", "G", "K", "L", "Q", "N", "D", "I", "R", "L", "N", "C", "T", "H"],
+            ["M", "H", "P", "R", "T", "S", "K", "O", "L", "U", "E", "V", "Z", "S", "R"],
+            ["L", "L", "S", "R", "A", "M", "F", "O", "X", "D", "B", "C", "P", "P", "H"],
+            ["M", "E", "T", "A", "R", "E", "N", "A", "H", "O", "S", "I", "S", "F", "F"],
+            ["T", "G", "B", "2", "2", "1", "B", "R", "E", "G", "Y", "Q", "P", "E", "N"],
+            ["K", "O", "W", "A", "Z", "J", "T", "N", "G", "R", "6", "V", "I", "K", "Y"]
+        ];
+
+        const wordsToFind = ['QUIDDITCH', 'WOOD', 'HARRY', 'ARENA'];
+        let foundWords = [];  // Store found words
+        let selectedCells = [];
+        const crosswordGridElement = document.getElementById("crosswordGrid");
+
+        // Function to render the crossword grid
+        function renderGrid() {
+            crossword.forEach((row, rowIndex) => {
+                row.forEach((letter, colIndex) => {
+                    let cell = document.createElement("div");
+                    cell.textContent = letter;
+                    cell.dataset.row = rowIndex;
+                    cell.dataset.col = colIndex;
+                    crosswordGridElement.appendChild(cell);
+
+                    cell.addEventListener('click', () => handleCellClick(cell));
+                });
+            });
+        }
+
+        // Function to handle cell clicks (select/deselect)
+        function handleCellClick(cell) {
+            const row = parseInt(cell.dataset.row);
+            const col = parseInt(cell.dataset.col);
+            const letter = crossword[row][col];
+
+            // Check if the cell is already selected
+            const cellIndex = selectedCells.findIndex(selected => selected.row === row && selected.col === col);
+
+            if (cellIndex === -1) {
+                // Not selected, so select it
+                selectedCells.push({ row, col, letter });
+                cell.classList.add('found');
+            } else {
+                // Already selected, so deselect it
+                selectedCells.splice(cellIndex, 1);
+                cell.classList.remove('found');
+            }
+
+            // Check if we found a word
+            checkWord(selectedCells);
+        }
+
+        // Function to check if a word has been found (checking horizontally, vertically, diagonally)
+        function checkWord(selectedCells) {
+            let word = selectedCells.map(cell => cell.letter).join('');
+            if (wordsToFind.includes(word) && !foundWords.includes(word)) {
+                foundWords.push(word); // Add word to found words list
+                alert('You found a word: ' + word);
+                highlightFoundWord(word);
+                deselectWord(selectedCells);
+            }
+
+            // Check if all words have been found
+            if (foundWords.length === wordsToFind.length) {
+                window.location.href ="step5.html";
+            }
+        }
+
+        // Function to highlight the found word in the grid
+        function highlightFoundWord(word) {
+            selectedCells.forEach(cell => {
+                if (word.includes(cell.letter)) {
+                    const cellElement = crosswordGridElement.children[cell.row * crossword.length + cell.col];
+                    cellElement.classList.add('found');
+                }
+            });
+        }
+
+        // Function to deselect the word after it's found
+        function deselectWord(selectedCells) {
+            selectedCells.forEach(cell => {
+                const cellElement = crosswordGridElement.children[cell.row * crossword.length + cell.col];
+                cellElement.classList.remove('found');
+            });
+            selectedCells = []; // Reset the selected cells
+        }
+
+        // Function to display a completion message when all words are found
+       
+       
+
+        // Render the grid
+        renderGrid();
+    </script>
+
 </body>
 </html>
